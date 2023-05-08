@@ -1,0 +1,47 @@
+#spring:
+##  main:
+##    allow-circular-references: true
+#  application:
+#    name: Final_Project
+#  datasource:
+#    password: 1111
+##    url: jdbc:postgresql://localhost:5455/spring-data-demo
+#    url: jdbc:postgresql://localhost:3000/waa-final-database
+#    username: postgres
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        format_sql: true
+#    show-sql: true
+#    defer-datasource-initialization: true
+#  sql:
+#    init:
+#      mode: always
+
+spring:
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:3000/waa-final-database
+    password: 1996
+  sql:
+    init:
+      mode: always
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: 'true'
+        show_sql: 'true'
+    defer-datasource-initialization: 'true'
+    hibernate:
+      ddl-auto: create
+
+server:
+  port: 8080
+subo8:
+  app:
+    jwtSecret: SecretKey!
+    jwtExpirationMs: '9000000'
